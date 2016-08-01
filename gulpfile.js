@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
 
+console.log('NODE_ENV:', process.env.NODE_ENV);
+
 var paths = {
     index: 'app/index.html',
     builds: 'builds',
