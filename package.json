@@ -14,7 +14,9 @@
   "scripts": {
     "openInBrowser": "start http://localhost:8000/builds ",
     "server": "http-server -a localhost -p 8000",
-    "gulp": "gulp"
+    "start:prod": "SET NODE_ENV=production && gulp",
+    "start:dev": "SET NODE_ENV=development && gulp",
+    "gulp": "SET NODE_ENV=production && gulp"
   },
   "author": "Sarhan Azizov",
   "license": "ISC"
