@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "better-npm-run": "0.0.10",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
@@ -14,9 +15,23 @@
   "scripts": {
     "openInBrowser": "start http://localhost:8000/builds ",
     "server": "http-server -a localhost -p 8000",
-    "start:prod": "SET NODE_ENV=production && gulp",
-    "start:dev": "SET NODE_ENV=development && gulp",
-    "gulp": "SET NODE_ENV=production && gulp"
+    "start:prod": "better-npm-run build:prod",
+    "start:dev": "better-npm-run build:dev",
+    "gulp": "gulp"
+  },
+  "betterScripts": {
+    "build:dev": {
+      "command": "gulp",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build:prod": {
+      "command": "gulp",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
   },
   "author": "Sarhan Azizov",
   "license": "ISC"
